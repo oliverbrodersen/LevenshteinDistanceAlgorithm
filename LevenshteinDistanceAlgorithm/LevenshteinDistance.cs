@@ -11,6 +11,8 @@ namespace LevenshteinDistanceAlgorithm
         /// </summary>
         public static int Compute(string s, string t)
         {
+            s = s.Trim().ToLower();
+            t = t.Trim().ToLower();
             int n = s.Length;
             int m = t.Length;
             int[,] d = new int[n + 1, m + 1];
